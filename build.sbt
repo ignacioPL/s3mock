@@ -8,8 +8,6 @@ organization := "io.flow"
 
 scalaVersion := "2.13.1"
 
-crossScalaVersions := Seq("2.11.11", "2.12.4","2.13.1")
-
 licenses := Seq("MIT" -> url("https://opensource.org/licenses/MIT"))
 
 homepage := Some(url("https://github.com/flowcommerce/s3mock"))
