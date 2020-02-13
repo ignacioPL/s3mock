@@ -30,7 +30,7 @@ Not supported features (these might be implemented later):
 s3mock package is available for Scala 2.11/2.12 (on Java 8). To install using SBT, add these
  statements to your `build.sbt`:
 
-    libraryDependencies += "io.flow" %% "s3mock" % "0.2.5" % "test",
+    libraryDependencies += "io.flow" %% "s3mock" % "0.2.6" % "test",
 
 
 S3Mock is also available as a [docker container](https://hub.docker.com/r/findify/s3mock/) for out-of-jvm testing:

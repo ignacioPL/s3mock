@@ -1,6 +1,6 @@
 name := "s3mock"
 
-version := "0.2.5"
+version := "0.2.6"
 
 organization := "io.findify"
 
@@ -77,6 +77,15 @@ imageNames in docker := Seq(
   ImageName(s"findify/s3mock:${version.value.replaceAll("\\+", "_")}"),
   ImageName(s"findify/s3mock:latest")
 )
+
+publishTo := {
+  val host = "https://flow.jfrog.io/flow"
+  if (isSnapshot.value) {
+    Some("Artifactory Realm" at s"$host/libs-snapshot-local;build.timestamp=" + new java.util.Date().getTime)
+  } else {
+    Some("Artifactory Realm" at s"$host/libs-release-local")
+  }
+}
 
 /*enablePlugins(JavaAppPackaging)
 
