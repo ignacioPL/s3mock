@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/findify/s3mock.svg?branch=master)](https://travis-ci.org/findify/s3mock)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.findify/s3mock_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.findify/s3mock_2.12)
 
+Flow fork of s3mock for Scala 2.13 compatibility
+
 s3mock is a web service implementing AWS S3 API, which can be used for local testing of your code using S3
 but without hitting real S3 endpoints.
 
@@ -28,18 +30,8 @@ Not supported features (these might be implemented later):
 s3mock package is available for Scala 2.11/2.12 (on Java 8). To install using SBT, add these
  statements to your `build.sbt`:
 
-    libraryDependencies += "io.findify" %% "s3mock" % "0.2.4" % "test",
+    libraryDependencies += "io.flow" %% "s3mock" % "0.2.5" % "test",
 
-On maven, update your `pom.xml` in the following way:
-```xml
-    // add this entry to <dependencies/>
-    <dependency>
-        <groupId>io.findify</groupId>
-        <artifactId>s3mock_2.12</artifactId>
-        <version>0.2.4</version>
-        <scope>test</scope>
-    </dependency>
-```
 
 S3Mock is also available as a [docker container](https://hub.docker.com/r/findify/s3mock/) for out-of-jvm testing:
 ```bash
