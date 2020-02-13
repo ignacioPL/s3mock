@@ -2,7 +2,7 @@ import sbt.Keys.resolvers
 
 name := "s3mock"
 
-version := "0.2.18"
+version := "0.3.0"
 
 organization := "io.flow"
 
@@ -14,7 +14,7 @@ homepage := Some(url("https://github.com/flowcommerce/s3mock"))
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % "2.5.23",
-  "com.typesafe.akka" %% "akka-http" % "10.1.8",
+  "com.typesafe.akka" %% "akka-http" % "10.1.11",
   "com.typesafe.akka" %% "akka-stream-testkit" % "2.5.23" % "test",
   "org.scala-lang.modules" %% "scala-xml" % "1.2.0",
   "com.github.pathikrit" %% "better-files" % "3.8.0",
