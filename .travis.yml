@@ -3,8 +3,6 @@ scala:
   - 2.13.1
 jdk:
   - openjdk13
-services:
-  - docker
 cache:
   directories:
     - $HOME/.ivy2/cache
@@ -13,7 +11,7 @@ cache:
 env:
   - AWS_ACCESS_KEY=x AWS_SECRET_KEY=x
 script:
-  - sbt ++$TRAVIS_SCALA_VERSION clean compile flowLintLib test doc
+  - sbt ++$TRAVIS_SCALA_VERSION clean compile test doc
 branches:
   only:
     - master
