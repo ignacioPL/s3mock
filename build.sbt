@@ -78,6 +78,16 @@ imageNames in docker := Seq(
   ImageName(s"findify/s3mock:latest")
 )
 
+resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/"
+resolvers += "scalaz-bintray" at "https://dl.bintray.com/scalaz/releases"
+resolvers += "Artifactory" at "https://flow.jfrog.io/flow/libs-release/"
+credentials += Credentials(
+  "Artifactory Realm",
+  "flow.jfrog.io",
+  System.getenv("ARTIFACTORY_USERNAME"),
+  System.getenv("ARTIFACTORY_PASSWORD")
+)
+
 publishTo := {
   val host = "https://flow.jfrog.io/flow"
   if (isSnapshot.value) {
