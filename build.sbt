@@ -4,7 +4,7 @@ name := "s3mock"
 
 version := "0.2.8"
 
-organization := "io.findify"
+organization := "io.flow"
 
 scalaVersion := "2.13.1"
 
@@ -14,7 +14,7 @@ val akkaVersion = "2.5.26"
 
 licenses := Seq("MIT" -> url("https://opensource.org/licenses/MIT"))
 
-homepage := Some(url("https://github.com/findify/s3mock"))
+homepage := Some(url("https://github.com/flowcommerce/s3mock"))
 
 libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-stream" % akkaVersion,
