@@ -10,16 +10,14 @@ scalaVersion := "2.13.1"
 
 crossScalaVersions := Seq("2.11.11", "2.12.4","2.13.1")
 
-val akkaVersion = "2.6.1"
-
 licenses := Seq("MIT" -> url("https://opensource.org/licenses/MIT"))
 
 homepage := Some(url("https://github.com/flowcommerce/s3mock"))
 
 libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-stream" % akkaVersion,
+  "com.typesafe.akka" %% "akka-stream" % "2.6.3",
   "com.typesafe.akka" %% "akka-http" % "10.1.10",
-  "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion % "test",
+  "com.typesafe.akka" %% "akka-stream-testkit" % "2.6.3" % "test",
   "org.scala-lang.modules" %% "scala-xml" % "1.2.0",
   "com.github.pathikrit" %% "better-files" % "3.8.0",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
