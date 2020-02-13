@@ -2,7 +2,7 @@ import sbt.Keys.resolvers
 
 name := "s3mock"
 
-version := "0.2.9"
+version := "0.2.10"
 
 organization := "io.flow"
 
