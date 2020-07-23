@@ -12,10 +12,11 @@ import com.amazonaws.services.s3.model.S3Object
 import com.amazonaws.services.s3.transfer.{TransferManager, TransferManagerBuilder}
 import com.typesafe.config.{Config, ConfigFactory}
 import io.findify.s3mock.provider.{FileProvider, InMemoryProvider}
+import org.scalatest.BeforeAndAfterAll
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
 import scala.collection.JavaConverters._
-import org.scalatest.{BeforeAndAfterAll, FlatSpec, Matchers}
-
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
 import scala.io.Source
@@ -23,7 +24,7 @@ import scala.io.Source
 /**
   * Created by shutty on 8/9/16.
   */
-trait S3MockTest extends FlatSpec with Matchers with BeforeAndAfterAll {
+trait S3MockTest extends AnyFlatSpec with Matchers with BeforeAndAfterAll {
   private val workDir = File.newTemporaryDirectory().pathAsString
   private val fileBasedPort = 8001
   private val fileSystemConfig = configFor("localhost", fileBasedPort)

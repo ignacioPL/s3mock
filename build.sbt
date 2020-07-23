@@ -28,6 +28,8 @@ libraryDependencies ++= Seq(
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2",
   "com.amazonaws" % "aws-java-sdk-s3" % "1.11.825",
   "org.scalatestplus" %% "scalacheck-1-14" % "3.2.0.0" % Test,
+  "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.0" % "test",
+  "org.scalatest" %% "scalatest-flatspec" % "3.2.0" % "test",
   "ch.qos.logback" % "logback-classic" % "1.2.3" % "test",
   "org.iq80.leveldb" % "leveldb" % "0.12",
   "com.lightbend.akka" %% "akka-stream-alpakka-s3" % "1.1.2" % "test"
