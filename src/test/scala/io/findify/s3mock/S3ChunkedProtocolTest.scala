@@ -4,14 +4,16 @@ import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
 import akka.stream.scaladsl.{Sink, Source}
 import akka.util.ByteString
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
+
 import scala.concurrent.duration._
 import scala.concurrent.Await
 
 /**
   * Created by shutty on 8/11/16.
   */
-class S3ChunkedProtocolTest extends FlatSpec with Matchers {
+class S3ChunkedProtocolTest extends AnyFlatSpec with Matchers {
   implicit val system = ActorSystem.create("test")
   implicit val mat = ActorMaterializer()
 
